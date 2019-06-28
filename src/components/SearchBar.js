@@ -6,15 +6,14 @@ class SearchBar extends React.Component{
         console.log(event.target.value);
     }
 
-    onFormSubmint(e){
-        e.preventDefault();
-        console.log('a');
+    onFormSubmint = event => {
+        event.preventDefault();
         this.props.onSubmit(this.state.term);
     }
    render(){
        return (
         <div className="ui segmet">
-           <form className="ui form">
+           <form className="ui form" onSubmit={this.onFormSubmint}>
               <div className="field">
                  <label> Image Seaccrh</label>
                  {/* <input type="text" value={this.state.term} onChange={this.onInputChange}></input> */}
