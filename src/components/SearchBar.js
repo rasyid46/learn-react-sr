@@ -13,6 +13,7 @@ class SearchBar extends React.Component{
    render(){
        return (
         <div className="ui segmet">
+            nama {this.props.nama}
            <form className="ui form" onSubmit={this.onFormSubmint}>
               <div className="field">
                  <label> Image Seaccrh</label>
@@ -20,7 +21,7 @@ class SearchBar extends React.Component{
                  <input type="text" value={this.state.term}
                   onChange={e =>this.setState({ term: e.target.value.toUpperCase()})}></input>
               </div>
-              
+             
            </form>
        </div>
        );
