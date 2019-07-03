@@ -23,8 +23,9 @@ class SongList extends Component{
         return <div className="ui divided list">{this.renderList()}</div>
     }
 }
-const mapStateToProps = (state) => {   
-    return state;
+const mapStateToProps = (state) => {
+    console.log(state);   
+    return { songs: state.songs};
 }
 export default connect(mapStateToProps,{
     selectSong
