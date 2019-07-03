@@ -1,37 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import CommentDetail from "./CommentDetail"; 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import App from './components/App';
+import reducers from './reducers';
 // create a react component
 
-function getButtonText(){
-	return 'Click on me';
-}
-// const App = () => {
-//   const labelName = { text : 'Enter Name :'};
-// 	return (
-// 		<div>
-// 			<label className="label" htmlFor="name">{labelName.text}</label>
-// 			<input id="name" type="text" />
-// 			<button style={{ backgroundColor: 'blue', color:'white'}}>{getButtonText()}</button>
-// 		</div>
-// 		); 
-// };
-
-const App = () => {
-	return (
-		<div className="ui container comments">
-		 <CommentDetail  author="sule"/>
-		 <CommentDetail  author="dani"/>
-		</div>
-	);
-};
-// take react component and share the screen
 
 ReactDOM.render(
-	<App />,
-	 document.querySelector("#root")
+	// <Provider strore={createStore(reducers)}>
+		<App />,
+	// </Provider>,
+	document.querySelector("#root")
 );
 
 // If you want your app to work offline and load faster, you can change
