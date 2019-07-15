@@ -1,8 +1,10 @@
 import React from 'react'; 
-import PostList from './PostList';
+
+import Approuter from './AppRouter';
+
 const App = () => {
  return <div className="ui container">
- <PostList /> 
+ <Approuter /> 
  </div>;
 };
 export default App;
