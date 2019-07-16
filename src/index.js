@@ -1,33 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
+import ReactDOM from "react-dom"; 
 import * as serviceWorker from "./serviceWorker";
-import CommentDetail from "./CommentDetail"; 
-// create a react component
+import App  from './component/App';
 
-function getButtonText(){
-	return 'Click on me';
-}
-// const App = () => {
-//   const labelName = { text : 'Enter Name :'};
-// 	return (
-// 		<div>
-// 			<label className="label" htmlFor="name">{labelName.text}</label>
-// 			<input id="name" type="text" />
-// 			<button style={{ backgroundColor: 'blue', color:'white'}}>{getButtonText()}</button>
-// 		</div>
-// 		); 
-// };
-
-const App = () => {
-	return (
-		<div className="ui container comments">
-		 <CommentDetail  author="sule"/>
-		 <CommentDetail  author="dani"/>
-		</div>
-	);
-};
-// take react component and share the screen
 
 ReactDOM.render(
 	<App />,
