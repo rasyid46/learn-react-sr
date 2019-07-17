@@ -4,7 +4,7 @@ import {signIn,signOut } from '../actions';
  
 class GoogleAuth extends React.Component {
         componentDidMount(){  //  state = { isSignedIn: null };
-         window.gapi.load('client:auth2', () =>{
+         window.gapi.load('client:auth2', () => {
              window.gapi.client
              .init({
                  clientId :
@@ -20,15 +20,16 @@ class GoogleAuth extends React.Component {
      }
    
      onAuthChange = ( isSignedIn ) => {
-        if(isSignedIn){         // this.setState({isSignedIn : this.auth.isSignedIn.get() });
-            this.props.signIn();
+        if(isSignedIn){    
+            const   userId =this.auth.currentUser.get().getId();    // this.setState({isSignedIn : this.auth.isSignedIn.get() });
+            this.props.signIn(userId);
         }else{
             this.props.signOut();
         }
     };
      
     onSignInClick = () => {
-        this.auth.signIn(this.auth.currentUser.get().getId());        
+        this.auth.signIn( );        
     };
 
     onSignOutClick = () => {
