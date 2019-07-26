@@ -43,7 +43,7 @@ class LoginForm extends React.Component{
           } ;
            let response  = await loginPost(datab);
            if(response.code==200){
-              this.setState({mode: 'edit'});
+            this.props.signIn();  
            }
        
       } catch (e) {
@@ -66,9 +66,7 @@ class LoginForm extends React.Component{
            
           } ;
            let response  = await loginPost(datab);
-           if(response.code==200){
-              this.setState({mode: 'edit'});
-           }
+            
        
       } catch (e) {
           var myJSON = JSON.stringify(e.message);
