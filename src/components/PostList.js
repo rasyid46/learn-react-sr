@@ -4,6 +4,7 @@ import {fetchPosts} from '../actions';
 class PostList extends React.Component{
 
     componentDidMount(){
+        
         this.props.fetchPosts();
     }
 
@@ -30,6 +31,8 @@ class PostList extends React.Component{
 }
 
 const mapStateToProps = (state) => {
+    console.log('mapStateToProps');
+    console.log(state);
     return { posts : state.posts };
 }
 

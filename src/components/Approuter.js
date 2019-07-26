@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import PostList from './PostList'; 
+import LoginForm from './LoginForm';
 import {  Navbar,Nav } from 'react-bootstrap';
 
 function Index() {
@@ -12,7 +13,7 @@ function About() {
 }
 
 function Login() {
-    return <h2>Login</h2>;
+    return <LoginForm/>;
 }
 
 function AppRouter() {
