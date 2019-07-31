@@ -15,7 +15,7 @@ class Gnavbar extends React.Component{
       }
       
       profile() {
-        return <Data_profile />;
+        return <Redux_data_profile />;
       }
 
       profileRedux(){
@@ -26,7 +26,9 @@ class Gnavbar extends React.Component{
          return <LoginForm/>;
       }
       
-       
+      pesanc(){
+        return <div>Pesan</div>;
+      }
 
     
 
@@ -43,7 +45,8 @@ class Gnavbar extends React.Component{
                 <Nav className="mr-auto">
                     <Link to="/data_cucian" className="nav-link">Cek cucian </Link>
                     <Link to="/profile/" className="nav-link" >Profile </Link>
-                    <Link to="/profileRedux/" className="nav-link" >Profile Redux </Link>
+                    <Link to="/profileRedux/" className="nav-link" >Profile Update </Link>
+                    <Link to="/pesanc/" className="nav-link" >Pesan </Link>
                     <Link to="/login" className="nav-link" >Logout</Link>
                  
                 </Nav>
@@ -52,6 +55,7 @@ class Gnavbar extends React.Component{
                     <Route path="/data_cucian" exact component={this.data_cucian} />
                     <Route path="/profile/" component={this.profile} />
                     <Route path="/profileRedux" component={this.profileRedux} />
+                    <Route path="/pesanc" component={this.pesanc} />
                     <Route path="/login/" component={this.Login} />
                 </Router>
               );

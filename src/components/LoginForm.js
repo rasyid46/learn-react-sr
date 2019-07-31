@@ -15,6 +15,7 @@ class LoginForm extends React.Component{
         this.state = {
           email: "",
           password: "",
+          loading : false,
         };
       }
       componentDidMount(){

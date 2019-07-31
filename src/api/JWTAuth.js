@@ -49,7 +49,26 @@ const loginPost = async (data) => {
     }
 }
 
- 
+const UpdateProfilePOst = async (data) => { 
+    try {
+        let response = await unsplash.put('updateProfile', data); 
+        console.log(response.data);
+        if(response.data.code == 200){
+            let content = response.data.data;
+          
+            let jwt = content.token;
+            localStorage.removeItem("userLogin");
+            localStorage.setItem("userLogin", JSON.stringify(content));
+            return response.data;
+        }
+    } catch(e){
+        console.log(e.response.data.descriptions);
+        localStorage.removeItem("access_token");
+        localStorage.removeItem("userLogin");
+        localStorage.removeItem("user");
+        return e.response.data;
+    }
+}
 
 const logout = () => {
     console.log('logout');
@@ -79,4 +98,4 @@ const data_spiner =() => {
   </>;
   } 
 
-export { loginPost , logout , list_cucian, unsplash ,data_spiner} 
+export { loginPost , logout , list_cucian, unsplash ,data_spiner , UpdateProfilePOst} 

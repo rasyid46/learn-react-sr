@@ -20,6 +20,7 @@ class Redux_data_profile extends React.Component{
             <ListGroup.Item>ID :    {dataProfile.id}</ListGroup.Item>
             <ListGroup.Item>Email :  {dataProfile.email}</ListGroup.Item>
             <ListGroup.Item>first_name :  {dataProfile.first_name}</ListGroup.Item> 
+            <ListGroup.Item>last name :  {dataProfile.last_name}</ListGroup.Item>
             </ListGroup>); 
      }
 
