@@ -102,43 +102,46 @@ class Form_pesanan extends React.Component {
             />
           </FormGroup>
 
-          <FormGroup controlId="type_cucian"  >
-            <FormLabel>Tipe cucian </FormLabel>
-            <FormControl
-              
-              type="text"
-              value={this.state.type_cucian}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
 
-          <FormGroup controlId="jenis_layanan"  >
-            <FormLabel>Jenis Layanan </FormLabel>
-            <FormControl
-              
-              type="text"
-              value={this.state.jenis_layanan}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
+          <Form.Group controlId="type_cucian" onChange={this.handleChange} value={this.state.type_cucian}>
+            <Form.Label>Jenis cucian</Form.Label>
+            <Form.Control as="select">
+            <option > Pilih </option>
+              <option value="1"> satuan </option>
+              <option value="2"> Kiloan </option>
+            </Form.Control>
+          </Form.Group>
 
-          <FormGroup controlId="layanan_kurir"  >
-            <FormLabel>Layanan Kurir </FormLabel>
-            <FormControl
-              
-              type="text"
-              value={this.state.layanan_kurir}
-              onChange={this.handleChange}
-            />
-          </FormGroup>
+         
           
+          <Form.Group controlId="jenis_layanan" onChange={this.handleChange} value={this.state.jenis_layanan}>
+            <Form.Label>Jenis Layanan</Form.Label>
+            <Form.Control as="select">
+            <option > Pilih </option>
+              <option value="1"> Reguler </option>
+              <option value="2"> Express </option>
+            </Form.Control>
+          </Form.Group>
+
+          <Form.Group controlId="layanan_kurir" onChange={this.handleChange} value={this.state.layanan_kurir}>
+            <Form.Label>Layanan Kuris</Form.Label>
+            <Form.Control as="select">
+            <option > Pilih </option>
+              <option value="1"> Antar Saja </option>
+              <option value="2"> Jemput Saja </option>
+              <option value="3"> Antar Jemput </option>
+            </Form.Control>
+          </Form.Group>
+ 
+ 
+
           <Button
             block
             
             disabled={!this.validateForm()}
             type="submit"
           > 
-            Login
+            Pesan
           </Button>
         </form>
       </div>
