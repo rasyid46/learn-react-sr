@@ -1,7 +1,6 @@
-import React, {Component} from 'react'; 
-import {  Spinner  } from 'react-bootstrap';
+import React, {Component} from 'react';  
 import {unsplash , data_spiner} from '../../api/JWTAuth';
-class Data_profile extends React.Component{
+class Data_profile extends Component{
 
     state = { profile: []  , loading : true};
     componentDidMount() {

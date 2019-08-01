@@ -1,10 +1,10 @@
 import React from 'react'; 
-import Table_gambar from '../components/Table_gambar';
+import Tablegambar from '../components/Table_gambar';
 import {  Table } from 'react-bootstrap';
-const List_cucian_grid= props => {
+const Listcuciangrid= props => {
   let dataCucian = props.cucian; 
   const gambar =  dataCucian.map(value =>{            
-    return <Table_gambar key={value.id} value={value}/>;
+    return <Tablegambar key={value.id} value={value}/>;
   });
 
  return <div className="image-list">Data Cucian
@@ -24,5 +24,5 @@ const List_cucian_grid= props => {
   </div>;
 }
 
-export default List_cucian_grid;
+export default Listcuciangrid;
  

@@ -1,14 +1,12 @@
 import React from 'react'; 
-import { Form ,Button , Breadcrumb , FormGroup,FormControl,FormLabel} from 'react-bootstrap';
+import { Form ,Button , FormGroup,FormControl,FormLabel} from 'react-bootstrap';
 
-import {UpdateStore, data_spiner,UpdateProfilePOst} from '../../api/JWTAuth';
+import {UpdateStore, data_spiner} from '../../api/JWTAuth';
 class Form_pesanan extends React.Component {
     constructor(props) {
       super(props);
-      const  userLogin =  localStorage.getItem('userLogin');
-      const dataU = JSON.parse(userLogin);
- 
-  
+
+      
          this.state = {
             nama: "",
             alamat : "",

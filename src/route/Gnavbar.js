@@ -84,9 +84,7 @@ class Gnavbar extends React.Component{
     }
 }
 
-const mapStateToProps = (state) => {
-  return { isSignedIn: state.auth.isSignedIn }
-};
+ 
 
 
 const fakeAuth = {
@@ -101,25 +99,7 @@ const fakeAuth = {
     setTimeout(cb, 100);
   }
 };
-function PrivateRoute({ component: Component, ...rest }) {
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        fakeAuth.isAuthenticated ? (
-          <Component {...props} />
-        ) : (
-          <Redirect
-            to={{
-              pathname: "/login",
-              state: { from: props.location }
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+ 
 
 function Protected() {
   return <h3>Protected</h3>;

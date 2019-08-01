@@ -4,7 +4,7 @@ import {loginPost, logout} from '../api/JWTAuth';
 
 import {connect} from 'react-redux';
 import {signIn,signOut } from '../actions';
-import { Route, Redirect , withRouter } from 'react-router'
+import { withRouter } from 'react-router'
 
 
 class LoginForm extends React.Component{

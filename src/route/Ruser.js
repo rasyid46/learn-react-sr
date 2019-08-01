@@ -5,10 +5,10 @@ import {  Navbar,Nav } from 'react-bootstrap';
 import Pagepos from '../components/dataCucian';
 import LoginForm from '../components/LoginForm'; 
 
-import Data_profile from '../components/data_profile/Data_profile';
-import Redux_data_profile from '../components/data_profile/Redux_data_profile';
-import Form_Profile from '../components/data_profile/Form_Profile';
-import Form_pesanan from '../components/data_pesanan/Form_pesanan';
+// import Data_profile from '../components/data_profile/Data_profile';
+import Reduxdataprofile from '../components/data_profile/Redux_data_profile';
+import FormProfile from '../components/data_profile/Form_Profile';
+import Formpesanan from '../components/data_pesanan/Form_pesanan';
 class Gnavbar extends React.Component{
      
     data_cucian() {
@@ -16,11 +16,11 @@ class Gnavbar extends React.Component{
       }
       
       profile() {
-        return <Redux_data_profile />;
+        return <Reduxdataprofile />;
       }
 
       profileRedux(){
-        return <Form_Profile />;
+        return <FormProfile />;
       }
       
       Login() {
@@ -28,7 +28,7 @@ class Gnavbar extends React.Component{
       }
       
       pesanc(){
-        return <Form_pesanan/>;
+        return <Formpesanan/>;
       }
 
     

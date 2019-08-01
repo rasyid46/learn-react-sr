@@ -1,4 +1,4 @@
-import React, {Component} from 'react'; 
+import React from 'react'; 
 import {  Spinner  } from 'react-bootstrap';
 import axios from 'axios';
 
@@ -18,7 +18,7 @@ const list_cucian = async () => {
     try {
         let response = await unsplash.get('pengajuan/byuser');
         console.log(response.data.data.data);
-        if(response.data.code == 200){
+        if(response.data.code = 200){
             return response.data;
         }
     } catch(e){
@@ -55,8 +55,6 @@ const UpdateProfilePOst = async (data) => {
         console.log(response.data);
         if(response.data.code == 200){
             let content = response.data.data;
-          
-            let jwt = content.token;
             localStorage.removeItem("userLogin");
             localStorage.setItem("userLogin", JSON.stringify(content));
             return response.data;
@@ -78,7 +76,6 @@ const UpdateStore = async (dataSend) => {
         let response = await unsplash.post('pengajuan/store', dataSend); 
         console.log(response.data);
         if(response.data.code == 200){
-            let content = response.data.data;
             return response.data;
         }
     } catch(e){

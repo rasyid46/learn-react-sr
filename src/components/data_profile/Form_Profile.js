@@ -1,5 +1,5 @@
 import React from 'react'; 
-import { Form ,Button , Breadcrumb , FormGroup,FormControl,FormLabel} from 'react-bootstrap';
+import { Button ,  FormGroup,FormControl,FormLabel} from 'react-bootstrap';
 
 import {UpdateProfilePOst, data_spiner} from '../../api/JWTAuth';
 class Form_Profile extends React.Component {

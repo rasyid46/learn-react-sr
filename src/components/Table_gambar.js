@@ -1,8 +1,6 @@
 import React from 'react'; 
 class Table_gambar extends React.Component{
-    constructor(props){
-        super(props);
-    }
+ 
     render(){
         const {created_at_date , no_order , jenis_layanan_desc , layanan_kurir_desc} = this.props.value
         return(

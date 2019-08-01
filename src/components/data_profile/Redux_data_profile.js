@@ -1,11 +1,11 @@
 import React, {Component} from 'react';  
-import {unsplash , data_spiner} from '../../api/JWTAuth';
+import { data_spiner} from '../../api/JWTAuth';
 
 import {connect} from 'react-redux';
 import {fetchProfile} from '../../actions';
-import { ListGroup ,Spinner } from 'react-bootstrap';
+import { ListGroup  } from 'react-bootstrap';
 
-class Redux_data_profile extends React.Component{
+class Redux_data_profile extends Component{
 
     state = { profile: []  , loading : true};
     componentDidMount() {
