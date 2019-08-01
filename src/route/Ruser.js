@@ -8,6 +8,7 @@ import LoginForm from '../components/LoginForm';
 import Data_profile from '../components/data_profile/Data_profile';
 import Redux_data_profile from '../components/data_profile/Redux_data_profile';
 import Form_Profile from '../components/data_profile/Form_Profile';
+import Form_pesanan from '../components/data_pesanan/Form_pesanan';
 class Gnavbar extends React.Component{
      
     data_cucian() {
@@ -27,7 +28,7 @@ class Gnavbar extends React.Component{
       }
       
       pesanc(){
-        return <div>Pesan</div>;
+        return <Form_pesanan/>;
       }
 
     

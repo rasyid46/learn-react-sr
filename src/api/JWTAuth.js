@@ -62,10 +62,32 @@ const UpdateProfilePOst = async (data) => {
             return response.data;
         }
     } catch(e){
-        console.log(e.response.data.descriptions);
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("userLogin");
-        localStorage.removeItem("user");
+       
+        if(e.response.data.code==401){
+            localStorage.removeItem("access_token");
+            localStorage.removeItem("userLogin");
+            localStorage.removeItem("user");
+        }
+        return e.response.data;
+    }
+}
+
+
+const UpdateStore = async (dataSend) => { 
+    try {
+        let response = await unsplash.post('pengajuan/store', dataSend); 
+        console.log(response.data);
+        if(response.data.code == 200){
+            let content = response.data.data;
+            return response.data;
+        }
+    } catch(e){
+       
+        if(e.response.data.code==401){
+            localStorage.removeItem("access_token");
+            localStorage.removeItem("userLogin");
+            localStorage.removeItem("user");
+        }
         return e.response.data;
     }
 }
@@ -98,4 +120,4 @@ const data_spiner =() => {
   </>;
   } 
 
-export { loginPost , logout , list_cucian, unsplash ,data_spiner , UpdateProfilePOst} 
+export { loginPost , logout , list_cucian, unsplash ,data_spiner , UpdateProfilePOst,UpdateStore} 
