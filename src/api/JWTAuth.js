@@ -32,13 +32,22 @@ const loginPost = async (data) => {
         let response = await axios.post(LOGIN_ENDPOINT, data); 
         console.log(response.data);
         if(response.data.code == 200){
+           
             let content = response.data.data;
-          
-            let jwt = content.token;
-            localStorage.setItem("access_token", jwt);
-            localStorage.setItem("userLogin", JSON.stringify(content));
-            localStorage.setItem("user", content);
-            return response.data;
+            const roles_name =content.roles_name;
+            if(roles_name=='Customer'){
+                let jwt = content.token;
+                localStorage.setItem("access_token", jwt);
+                localStorage.setItem("userLogin", JSON.stringify(content));
+                localStorage.setItem("user", content);
+                return response.data;
+            }else{
+                alert('Halaman Khusus customer');
+                localStorage.removeItem("access_token");
+                localStorage.removeItem("userLogin");
+                localStorage.removeItem("user");
+            }
+           
         }
     } catch(e){
         console.log(e.response.data.descriptions);
