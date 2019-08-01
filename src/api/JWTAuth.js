@@ -52,7 +52,7 @@ const loginPost = async (data) => {
 const UpdateProfilePOst = async (data) => { 
     try {
         let response = await unsplash.put('updateProfile', data); 
-        console.log(response.data);
+        
         if(response.data.code == 200){
             let content = response.data.data;
             localStorage.removeItem("userLogin");

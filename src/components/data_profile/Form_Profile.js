@@ -35,6 +35,8 @@ class Form_Profile extends React.Component {
       }
 
       let response  = await UpdateProfilePOst(data);
+      
+      console.log(response);
       if(response.code==200){
          console.log(response);
          this.setState({loading : false});
@@ -94,7 +96,7 @@ class Form_Profile extends React.Component {
             disabled={!this.validateForm()}
             type="submit"
           > 
-            Login
+            Update Profile
           </Button>
         </form>
       </div>
